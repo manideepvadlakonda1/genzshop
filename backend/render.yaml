@@ -1,0 +1,14 @@
+# Render configuration
+services:
+  - type: web
+    name: genzshop-backend
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PORT
+        value: 80
