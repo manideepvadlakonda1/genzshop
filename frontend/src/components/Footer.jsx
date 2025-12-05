@@ -71,7 +71,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="footer-bottom">
         <div className="container">
-          <p className="footer-copyright">© 2024 GenZshop. All Rights Reserved. | Designed and Developed by <a href="https://manideepf.netlify.app/" target="_blank" rel="noopener noreferrer">Manideep</a></p>
+          <p className="footer-copyright">© 2024 GenZshop. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
