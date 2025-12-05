@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import './productModal.css'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api'
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 // Configure axios defaults
 axios.defaults.timeout = 60000
 axios.defaults.headers.post['Content-Type'] = 'application/json'

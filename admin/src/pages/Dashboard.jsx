@@ -5,7 +5,7 @@ import RecentOrderItem from '../components/RecentOrderItem'
 import { useNavigate } from 'react-router-dom'
 import './dashboard.css'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api'
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 
 const Dashboard = () => {
   const navigate = useNavigate()
