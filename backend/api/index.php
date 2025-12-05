@@ -44,7 +44,29 @@ $requestMethod = $_SERVER['REQUEST_METHOD'];
 
 // Remove base path and query string
 $path = parse_url($requestUri, PHP_URL_PATH);
-$path = str_replace('/api', '', $path);
+
+// Handle root path
+if ($path === '/' || $path === '' || $path === '/api') {
+    if ($requestMethod === 'GET') {
+        http_response_code(200);
+        echo json_encode([
+            'success' => true,
+            'message' => 'GenZShop API is running',
+            'version' => '1.0.0'
+        ]);
+        exit();
+    }
+}
+
+// Remove /api prefix if present
+if (str_starts_with($path, '/api')) {
+    $path = substr($path, 4);
+}
+
+// Normalize path
+if (empty($path) || $path === '/') {
+    $path = '/';
+}
 
 // Route handling
 try {

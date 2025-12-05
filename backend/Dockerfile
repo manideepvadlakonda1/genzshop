@@ -31,18 +31,28 @@ COPY . .
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
-# Update Apache configuration
-RUN echo "<Directory /var/www/html/api>\n\
-    Options Indexes FollowSymLinks\n\
-    AllowOverride All\n\
-    Require all granted\n\
-</Directory>" > /etc/apache2/conf-available/api.conf \
-    && a2enconf api
+# Update Apache configuration for API routing
+RUN a2dissite 000-default
 
-# Set DocumentRoot to api directory
-ENV APACHE_DOCUMENT_ROOT /var/www/html/api
-RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
-RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+# Create custom VirtualHost configuration
+RUN echo '<VirtualHost *:80>\n\
+    DocumentRoot /var/www/html/api\n\
+    ServerName localhost\n\
+    <Directory /var/www/html/api>\n\
+        Options Indexes FollowSymLinks\n\
+        AllowOverride All\n\
+        Require all granted\n\
+    </Directory>\n\
+    ErrorLog ${APACHE_LOG_DIR}/error.log\n\
+    CustomLog ${APACHE_LOG_DIR}/access.log combined\n\
+</VirtualHost>' > /etc/apache2/sites-available/000-default.conf
+
+# Enable the site
+RUN a2ensite 000-default
+
+# Set proper ownership and permissions
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod -R 755 /var/www/html
 
 # Expose port
 EXPOSE 80
