@@ -23,13 +23,13 @@
 .page-header h1 {
   font-size: 42px;
   font-weight: 700;
-  color: #252B42;
+  color: var(--text-light);
   margin-bottom: 15px;
 }
 
 .page-subtitle {
   font-size: 18px;
-  color: #737373;
+  color: #999;
   font-weight: 500;
 }
 
@@ -51,7 +51,7 @@
 .content-section h2 {
   font-size: 32px;
   font-weight: 700;
-  color: #252B42;
+  color: var(--text-light);
   margin-bottom: 20px;
   padding-bottom: 15px;
   border-bottom: 3px solid #D4AF37;
@@ -60,14 +60,14 @@
 .content-section h3 {
   font-size: 22px;
   font-weight: 600;
-  color: #252B42;
+  color: var(--text-light);
   margin: 25px 0 15px;
 }
 
 .content-section h4 {
   font-size: 18px;
   font-weight: 600;
-  color: #252B42;
+  color: var(--text-light);
   margin: 20px 0 10px;
 }
 
@@ -94,7 +94,7 @@
 
 .content-section ul li strong,
 .content-section ol li strong {
-  color: #252B42;
+  color: var(--text-light);
   font-weight: 600;
 }
 
@@ -149,13 +149,13 @@
 .value-card h3 {
   font-size: 20px;
   font-weight: 600;
-  color: #252B42;
+  color: var(--text-light);
   margin: 15px 0;
 }
 
 .value-card p {
   font-size: 15px;
-  color: #737373;
+  color: #999;
   margin: 0;
 }
 

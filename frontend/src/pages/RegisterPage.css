@@ -51,8 +51,6 @@
   background: var(--luxury-dark);
   border-color: var(--primary-gold);
 }
-  border-color: #8B1A1A;
-}
 
 .google-btn i {
   font-size: 20px;
@@ -102,14 +100,14 @@
 
 .register-form-container input:focus {
   outline: none;
-  border-color: #8B1A1A;
+  border-color: var(--primary-gold);
 }
 
 .submit-btn {
   width: 100%;
   padding: 14px;
-  background: #8B1A1A;
-  color: white;
+  background: var(--primary-gold);
+  color: var(--black-primary);
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -120,13 +118,13 @@
 }
 
 .submit-btn:hover {
-  background: #6d1414;
+  background: var(--hover-gold);
 }
 
 .error-message {
   padding: 12px;
-  background-color: #ffebee;
-  color: #c62828;
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #ff6b6b;
   margin-bottom: 20px;
   border-radius: 8px;
   font-size: 14px;
@@ -140,7 +138,7 @@
 }
 
 .form-footer .link {
-  color: #8B1A1A;
+  color: var(--primary-gold);
   font-weight: 600;
   text-decoration: none;
 }

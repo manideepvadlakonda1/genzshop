@@ -168,7 +168,7 @@
 }
 
 .edit-btn:hover, .add-btn:hover, .refresh-btn:hover {
-  background: #6d1414;
+  background: var(--hover-gold);
 }
 
 .refresh-btn i {
@@ -192,12 +192,12 @@
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  background: #f0f0f0;
+  background: var(--luxury-dark);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
-  border: 3px solid #8B1A1A;
+  border: 3px solid var(--border-gold);
 }
 
 .image-preview img {
@@ -208,24 +208,26 @@
 
 .image-preview i {
   font-size: 80px;
-  color: #8B1A1A;
+  color: var(--primary-gold);
 }
 
 .upload-label {
   padding: 10px 20px;
-  background: #8B1A1A;
-  color: white;
+  background: var(--primary-gold);
+  color: var(--black-primary);
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   gap: 8px;
   font-size: 14px;
+  border: 2px solid var(--primary-gold);
 }
 
 .upload-label:hover {
-  background: #6d1414;
+  background: transparent;
+  color: var(--primary-gold);
 }
 
 .profile-form .form-group {
@@ -235,7 +237,7 @@
 .profile-form .form-group label {
   display: block;
   margin-bottom: 8px;
-  color: #252B42;
+  color: var(--text-light);
   font-weight: 500;
   font-size: 14px;
 }
@@ -243,7 +245,7 @@
 .profile-form .form-group input {
   width: 100%;
   padding: 14px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-gold);
   border-radius: 8px;
   font-size: 15px;
 }
@@ -254,7 +256,7 @@
 }
 
 .profile-form .form-group small {
-  color: #737373;
+  color: #999;
   font-size: 12px;
   margin-top: 5px;
   display: block;
@@ -277,17 +279,17 @@
 }
 
 .save-btn {
-  background: #8B1A1A;
-  color: white;
+  background: var(--primary-gold);
+  color: var(--black-primary);
 }
 
 .save-btn:hover {
-  background: #6d1414;
+  background: var(--hover-gold);
 }
 
 .cancel-btn {
-  background: #f0f0f0;
-  color: #252B42;
+  background: var(--luxury-dark);
+  color: var(--text-light);
 }
 
 .cancel-btn:hover {
@@ -301,13 +303,13 @@
 
 .detail-item label {
   display: block;
-  color: #737373;
+  color: #999;
   font-size: 14px;
   margin-bottom: 5px;
 }
 
 .detail-item p {
-  color: #252B42;
+  color: var(--text-light);
   font-size: 16px;
   font-weight: 500;
 }
@@ -322,7 +324,7 @@
 }
 
 .address-form h3 {
-  color: #252B42;
+  color: var(--text-light);
   margin-bottom: 25px;
   font-size: 20px;
   font-weight: 600;
@@ -339,10 +341,10 @@
   margin-bottom: 20px;
 }
 
-.address-form .form-group label {
+.profile-form .form-group label {
   display: block;
   margin-bottom: 8px;
-  color: #252B42;
+  color: var(--text-light);
   font-weight: 500;
   font-size: 14px;
 }
@@ -351,7 +353,7 @@
 .address-form .form-group select {
   width: 100%;
   padding: 14px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-gold);
   border-radius: 8px;
   font-size: 15px;
   background: white;
@@ -361,7 +363,7 @@
 .address-form .form-group input:focus,
 .address-form .form-group select:focus {
   outline: none;
-  border-color: #8B1A1A;
+  border-color: var(--hover-gold);
 }
 
 .checkbox-group {
@@ -381,11 +383,11 @@
   width: 18px;
   height: 18px;
   cursor: pointer;
-  accent-color: #8B1A1A;
+  accent-color: var(--primary-gold);
 }
 
 .checkbox-group span {
-  color: #252B42;
+  color: var(--text-light);
   font-size: 14px;
   font-weight: 500;
 }
@@ -403,8 +405,8 @@
 }
 
 .address-card:hover {
-  border-color: #8B1A1A;
-  box-shadow: 0 4px 12px rgba(139, 26, 26, 0.1);
+  border-color: var(--primary-gold);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
 }
 
 .address-header {
@@ -418,16 +420,16 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #252B42;
+  color: var(--text-light);
 }
 
 .address-type i {
-  color: #8B1A1A;
+  color: var(--primary-gold);
 }
 
 .default-badge {
-  background: #8B1A1A;
-  color: white;
+  background: var(--primary-gold);
+  color: var(--black-primary);
   padding: 3px 10px;
   border-radius: 12px;
   font-size: 12px;
@@ -443,7 +445,7 @@
   width: 35px;
   height: 35px;
   border: none;
-  background: #f0f0f0;
+  background: var(--luxury-dark);
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -453,12 +455,12 @@
 }
 
 .icon-btn:hover {
-  background: #8B1A1A;
-  color: white;
+  background: var(--primary-gold);
+  color: var(--black-primary);
 }
 
 .address-details p {
-  color: #737373;
+  color: #999;
   margin: 5px 0;
 }
 
@@ -476,8 +478,8 @@
 }
 
 .order-card:hover {
-  border-color: #8B1A1A;
-  box-shadow: 0 4px 12px rgba(139, 26, 26, 0.1);
+  border-color: var(--primary-gold);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
 }
 
 .order-header {
@@ -520,7 +522,7 @@
 
 .item-mini-name {
   font-size: 14px;
-  color: #252B42;
+  color: var(--text-light);
   font-weight: 500;
   margin-bottom: 3px;
   overflow: hidden;
@@ -530,24 +532,24 @@
 
 .item-mini-qty {
   font-size: 12px;
-  color: #737373;
+  color: #999;
   margin: 0;
 }
 
 .more-items {
   font-size: 13px;
-  color: #8B1A1A;
+  color: var(--primary-gold);
   font-weight: 500;
   margin: 5px 0 0 0;
 }
 
 .order-info h4 {
-  color: #252B42;
+  color: var(--text-light);
   margin-bottom: 5px;
 }
 
 .order-date {
-  color: #737373;
+  color: #999;
   font-size: 14px;
 }
 
@@ -587,7 +589,7 @@
 .order-meta {
   display: flex;
   gap: 20px;
-  color: #737373;
+  color: #999;
   font-size: 14px;
 }
 
@@ -596,7 +598,7 @@
 }
 
 .order-total {
-  color: #252B42;
+  color: var(--text-light);
   font-weight: 700;
   font-size: 18px;
 }
@@ -621,7 +623,7 @@
 .empty-state {
   text-align: center;
   padding: 60px 20px;
-  color: #737373;
+  color: #999;
 }
 
 .empty-state i {
@@ -724,7 +726,7 @@
 }
 
 .modal-header h2 {
-  color: #252B42;
+  color: var(--text-light);
   font-size: 24px;
   font-weight: 700;
   margin: 0;
@@ -734,7 +736,7 @@
   background: none;
   border: none;
   font-size: 24px;
-  color: #737373;
+  color: #999;
   cursor: pointer;
   width: 36px;
   height: 36px;
@@ -746,8 +748,8 @@
 }
 
 .modal-close:hover {
-  background: #f5f5f5;
-  color: #252B42;
+  background: var(--luxury-dark);
+  color: var(--primary-gold);
 }
 
 .modal-body {
@@ -765,14 +767,14 @@
 }
 
 .order-detail-info h3 {
-  color: #252B42;
+  color: var(--text-light);
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 8px 0;
 }
 
 .order-detail-info .order-date {
-  color: #737373;
+  color: #999;
   font-size: 14px;
   margin: 0;
 }
@@ -829,20 +831,20 @@
 }
 
 .order-detail-item-info h5 {
-  color: #252B42;
+  color: var(--text-light);
   font-size: 16px;
   font-weight: 600;
   margin: 0 0 5px 0;
 }
 
 .order-detail-item-info .item-category {
-  color: #737373;
+  color: #999;
   font-size: 13px;
   margin: 0 0 5px 0;
 }
 
 .order-detail-item-info .item-quantity {
-  color: #252B42;
+  color: var(--text-light);
   font-size: 14px;
   font-weight: 500;
   margin: 0;
@@ -863,7 +865,7 @@
 
 .shipping-address-box p {
   margin: 0 0 8px 0;
-  color: #252B42;
+  color: var(--text-light);
   font-size: 14px;
   line-height: 1.6;
 }
@@ -891,7 +893,7 @@
 
 .payment-info-box .payment-method {
   font-weight: 600;
-  color: #252B42;
+  color: var(--text-light);
   text-transform: uppercase;
   font-size: 14px;
 }
@@ -924,7 +926,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
-  color: #252B42;
+  color: var(--text-light);
   font-size: 15px;
 }
 

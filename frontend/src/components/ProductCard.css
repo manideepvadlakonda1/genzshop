@@ -161,9 +161,9 @@
     border: none;
     cursor: pointer;
 }.view-details-btn:hover {
-  background: #6d1414;
+  background: var(--hover-gold);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(139, 26, 26, 0.3);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
 }
 
 /* Tablet Responsive */

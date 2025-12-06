@@ -102,7 +102,7 @@
 .logo-text {
     font-size: 18px;
     font-weight: 700;
-    color: #252B42;
+    color: var(--text-light);
     margin-left: 8px;
     display: none;
 }
@@ -169,7 +169,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #252B42;
+    color: var(--text-light);
     text-decoration: none;
     padding: 8px 15px;
     border-radius: 25px;
@@ -177,8 +177,8 @@
 }
 
 .profile-link:hover {
-    background-color: #f8f9fa;
-    color: #8B1A1A;
+    background-color: var(--luxury-dark);
+    color: var(--primary-gold);
 }
 
 .user-name {
@@ -195,16 +195,16 @@
 }
 
 .icon-link:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-    color: #8B1A1A;
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--primary-gold);
 }
 
 .cart-badge {
     position: absolute;
     top: -5px;
     right: -5px;
-    background-color: #8B1A1A;
-    color: white;
+    background-color: var(--primary-gold);
+    color: var(--black-primary);
     border-radius: 50%;
     width: 18px;
     height: 18px;
@@ -219,7 +219,7 @@
     display: none;
     background: none;
     border: none;
-    color: #252B42;
+    color: var(--text-light);
     font-size: 24px;
     cursor: pointer;
 }
@@ -234,7 +234,7 @@
 }
 
 .user-name {
-    color: #252B42;
+    color: var(--text-light);
     font-weight: 600;
 }
 
