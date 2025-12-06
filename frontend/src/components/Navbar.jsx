@@ -22,7 +22,8 @@ const Navbar = () => {
         <div className="container navbar-content">
           <div className="navbar-left">
             <Link to="/" className="logo">
-              <img src="/logo.png" alt="GenZShop Logo" className="logo-img" />
+              <img src="/logo.png" alt="GenZShop" className="logo-img" />
+              <span className="logo-text">GenZShop</span>
             </Link>
           </div>
           
