@@ -24,6 +24,17 @@ html {
   width: 100%;
 }
 
+/* Text Selection Styling */
+::selection {
+  background-color: var(--primary-gold);
+  color: var(--black-primary);
+}
+
+::-moz-selection {
+  background-color: var(--primary-gold);
+  color: var(--black-primary);
+}
+
 body {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   color: var(--text-light);

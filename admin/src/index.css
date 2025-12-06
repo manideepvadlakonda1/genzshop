@@ -31,6 +31,17 @@
 
 * { box-sizing: border-box; }
 
+/* Text Selection Styling */
+::selection {
+  background-color: var(--primary-gold);
+  color: var(--black-primary);
+}
+
+::-moz-selection {
+  background-color: var(--primary-gold);
+  color: var(--black-primary);
+}
+
 html, body, #root { height: 100%; }
 
 body {
