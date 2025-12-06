@@ -1,4 +1,5 @@
 import { NavLink, useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 import { useUIStore } from '../store/uiStore'
 import { useAuthStore } from '../store/authStore'
 import './sidebar.css'
@@ -19,6 +20,11 @@ const Sidebar = () => {
   const { sidebarOpen, toggleSidebar } = useUIStore()
   const logout = useAuthStore((state) => state.logout)
   const navigate = useNavigate()
+
+  // Debug: log sidebar state
+  useEffect(() => {
+    console.log('Sidebar state:', { sidebarOpen, windowWidth: typeof window !== 'undefined' ? window.innerWidth : 'unknown' })
+  }, [sidebarOpen])
 
   const handleLogout = () => {
     if (window.confirm('Are you sure you want to logout?')) {
