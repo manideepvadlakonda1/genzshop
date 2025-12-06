@@ -624,7 +624,7 @@
 .order-meta {
   display: flex;
   gap: 20px;
-  color: #999;
+  color: var(--text-light);
   font-size: 14px;
 }
 
@@ -633,7 +633,7 @@
 }
 
 .order-total {
-  color: var(--text-light);
+  color: var(--primary-gold);
   font-weight: 700;
   font-size: 18px;
 }
@@ -921,6 +921,7 @@
   align-items: center;
   padding: 10px 0;
   border-bottom: 1px solid #e0e0e0;
+  color: var(--black-primary);
 }
 
 .payment-info-box .payment-row:last-child {
