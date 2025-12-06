@@ -6,18 +6,27 @@ import Header from './Header'
 import './layout.css'
 
 const Layout = () => {
-  const { sidebarOpen, toggleSidebar } = useUIStore()
+  const { sidebarOpen, toggleSidebar, setSidebarOpen } = useUIStore()
 
   useEffect(() => {
+    // Close sidebar on initial load for mobile widths
+    if (typeof window !== 'undefined' && window.innerWidth <= 900 && sidebarOpen) {
+      setSidebarOpen(false)
+    }
+
     const handleResize = () => {
       if (window.innerWidth > 900 && !sidebarOpen) {
-        toggleSidebar()
+        setSidebarOpen(true)
+      }
+
+      if (window.innerWidth <= 900 && sidebarOpen) {
+        setSidebarOpen(false)
       }
     }
 
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
-  }, [sidebarOpen, toggleSidebar])
+  }, [sidebarOpen, setSidebarOpen])
 
   return (
     <div className="app-shell">
