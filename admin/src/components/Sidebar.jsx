@@ -27,29 +27,44 @@ const Sidebar = () => {
     }
   }
 
+  const handleNavClick = () => {
+    if (window.innerWidth <= 900) {
+      toggleSidebar()
+    }
+  }
+
   return (
-    <aside className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
-      <div className="sidebar-header">
-        <button className="menu-btn" onClick={toggleSidebar}>
-          <i className="fa-solid fa-bars" />
-        </button>
-        <span className="brand">Admin Panel</span>
-      </div>
-      <nav className="nav">
-        {items.map((it) => (
-          <NavLink key={it.to} to={it.to} end className={({isActive})=>`nav-item ${isActive ? 'active' : ''}`}>
-            <i className={`fa-solid ${it.icon}`} />
-            <span>{it.label}</span>
-          </NavLink>
-        ))}
-      </nav>
-      <div className="sidebar-footer">
-        <button onClick={handleLogout} className="nav-item logout">
-          <i className="fa-solid fa-right-from-bracket" />
-          <span>Logout</span>
-        </button>
-      </div>
-    </aside>
+    <>
+      {sidebarOpen && <div className="sidebar-backdrop" onClick={toggleSidebar} />}
+      <aside className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+        <div className="sidebar-header">
+          <button className="menu-btn" onClick={toggleSidebar}>
+            <i className="fa-solid fa-bars" />
+          </button>
+          <span className="brand">Admin Panel</span>
+        </div>
+        <nav className="nav">
+          {items.map((it) => (
+            <NavLink 
+              key={it.to} 
+              to={it.to} 
+              end 
+              className={({isActive})=>`nav-item ${isActive ? 'active' : ''}`}
+              onClick={handleNavClick}
+            >
+              <i className={`fa-solid ${it.icon}`} />
+              <span>{it.label}</span>
+            </NavLink>
+          ))}
+        </nav>
+        <div className="sidebar-footer">
+          <button onClick={handleLogout} className="nav-item logout">
+            <i className="fa-solid fa-right-from-bracket" />
+            <span>Logout</span>
+          </button>
+        </div>
+      </aside>
+    </>
   )
 }
 

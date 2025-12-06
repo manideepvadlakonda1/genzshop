@@ -11,6 +11,28 @@
   border-bottom: 1px solid var(--border-gold);
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--primary-gold);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.mobile-menu-btn:hover {
+  color: var(--text-light);
+}
+
 .page-title {
   margin: 0;
   font-size: 18px;
@@ -46,6 +68,10 @@
   .header {
     padding: 12px 15px;
     gap: 12px;
+  }
+
+  .mobile-menu-btn {
+    display: block;
   }
 
   .page-title {

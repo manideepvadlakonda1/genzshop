@@ -19,10 +19,15 @@
 .app-main {
   display: grid;
   grid-template-rows: auto 1fr;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .app-content {
   padding: 20px;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 1024px) {

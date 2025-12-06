@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom'
+import { useUIStore } from '../store/uiStore'
 import './header.css'
 
 const titleMap = {
@@ -15,10 +16,16 @@ const titleMap = {
 
 const Header = () => {
   const { pathname } = useLocation()
+  const { toggleSidebar } = useUIStore()
   const title = titleMap[pathname] || 'Admin'
   return (
     <header className="header">
-      <h1 className="page-title">{title}</h1>
+      <div className="header-left">
+        <button className="mobile-menu-btn" onClick={toggleSidebar}>
+          <i className="fa-solid fa-bars" />
+        </button>
+        <h1 className="page-title">{title}</h1>
+      </div>
       <div className="header-actions">
         <button className="icon-btn" title="Notifications">
           <i className="fa-regular fa-bell" />
